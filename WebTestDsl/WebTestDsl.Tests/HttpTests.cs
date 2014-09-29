@@ -10,7 +10,7 @@ namespace WebTestDsl.Tests
         [TestMethod]
         public void Get()
         {
-            var resp = Http.Get("http://www.google.com");
+            var resp = Http.Create().Get("http://www.google.com");
             Assert.AreEqual(resp.Status, 200);
         }
     }

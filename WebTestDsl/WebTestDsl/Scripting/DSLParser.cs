@@ -12,7 +12,7 @@ namespace WebTestDsl.Scripting
         public static string[] ToCSharp(string[] scriptLines)
         {
             var csharpLines = new string[scriptLines.Length];
-            var variables = new HashSet<string>();
+            var variables = new HashSet<string>{ "http" };
             for (int i = 0; i < scriptLines.Length; i++)
             {
                 var scriptLine = scriptLines[i];
@@ -26,7 +26,7 @@ namespace WebTestDsl.Scripting
                 }
                 else if (scriptLine.StartsWith("##"))
                 {
-                    csharpLines[i] = scriptLine.Remove(0, 1);
+                    csharpLines[i] = scriptLine.Remove(0, 2);
                     continue;
                 }
                 var regex = new Regex("\"[^\"\r\n]*\"");
@@ -99,12 +99,16 @@ namespace WebTestDsl.Scripting
                 csharpLines[i] = csharpLine;
             }
 
-            return csharpLines;
+            var newCharpLines = new List<string>(csharpLines);
+            newCharpLines.Insert(0, "var http = Http.Create();"); //automatically create an instance of the Http object
+            return newCharpLines.ToArray();
         }
 
         private static string ConvertMethod(string dslMethod, string[] chunks, int paramStart, HashSet<string> variables = null)
         {
-            var result = dslMethod.Split('.')[0].ToPascalCase() + "." + dslMethod.Split('.')[1].ToPascalCase() + "("; //split the class and method name to format seperately
+            var firstPart = dslMethod.Split('.')[0];
+            firstPart = variables != null && variables.Contains(firstPart) ? firstPart : firstPart.ToPascalCase();
+            var result = firstPart + "." + dslMethod.Split('.')[1].ToPascalCase() + "("; //split the class and method name to format seperately
             for (int k = paramStart; k <= chunks.Length - 1; k++)
             {
                 bool paramIsVariable;

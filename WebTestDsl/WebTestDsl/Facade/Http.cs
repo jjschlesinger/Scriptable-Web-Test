@@ -4,28 +4,36 @@ using System.Net.Http;
 
 namespace WebTestDsl.Facade
 {
-    public static class Http
+    public class Http
     {
-        private static HttpRequestMessage _request = new HttpRequestMessage();
-        private static readonly CookieCollection _cookieCollection = new CookieCollection();
-        public static void SetCookie(string name, string value)
+        private HttpRequestMessage _request = new HttpRequestMessage();
+        private readonly CookieCollection _cookieCollection = new CookieCollection();
+
+        public static Http Create()
+        {
+            return new Http();
+        }
+        
+        public Http SetCookie(string name, string value)
         {
             _cookieCollection.Add(new Cookie(name, value));
+            return this;
         }
 
-        public static void SetHeader(string name, string value)
+        public Http SetHeader(string name, string value)
         {
             _request.Headers.Add(name, value);
+            return this;
         }
 
-        public static Response Get(string url)
+        public Response Get(string url)
         {
             _request.Method = HttpMethod.Get;
             _request.RequestUri = new Uri(url);
             return Execute();
         }
 
-        private static Response Execute()
+        private Response Execute()
         {
             foreach (Cookie cookie in _cookieCollection)
             {
