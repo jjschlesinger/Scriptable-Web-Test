@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTestDsl", "WebTestDsl\WebTestDsl.csproj", "{9ED2A1BF-6924-4801-95E8-56687C1A3B8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTestDsl.Tests", "WebTestDsl.Tests\WebTestDsl.Tests.csproj", "{6A04DE1B-1184-4A3D-82F9-1FC2890EB0C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTestScriptAgent", "WebTestScriptAgent\WebTestScriptAgent.csproj", "{F4B8BA19-1B49-4DD9-AEE2-F0AA0754D01B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ED2A1BF-6924-4801-95E8-56687C1A3B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED2A1BF-6924-4801-95E8-56687C1A3B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED2A1BF-6924-4801-95E8-56687C1A3B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED2A1BF-6924-4801-95E8-56687C1A3B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A04DE1B-1184-4A3D-82F9-1FC2890EB0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A04DE1B-1184-4A3D-82F9-1FC2890EB0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A04DE1B-1184-4A3D-82F9-1FC2890EB0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A04DE1B-1184-4A3D-82F9-1FC2890EB0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B8BA19-1B49-4DD9-AEE2-F0AA0754D01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B8BA19-1B49-4DD9-AEE2-F0AA0754D01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B8BA19-1B49-4DD9-AEE2-F0AA0754D01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B8BA19-1B49-4DD9-AEE2-F0AA0754D01B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
