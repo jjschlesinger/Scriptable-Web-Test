@@ -14,3 +14,26 @@ http.set_header "accept" "text/html"
 var resp = http.get "http://google.com"
 #wl "Response Status: {0}" resp.status
 ```
+
+Same as above example but using C#
+
+```
+Http.SetCookie("myCookieName", "myCookieValue");
+Http.SetHeader("accept", "text/html");
+var resp = Http.Get("http://google.com");
+Console.WriteLine("Response Status: {0}", resp2.Status);
+```
+
+Mixing the DSL and C# in the same script
+
+```
+http.set_cookie "myCookieName" "myCookieValue"
+http.set_header "accept" "text/html"
+var resp = http.get "http://google.com"
+#wl "Response Status: {0}" resp.status
+
+##Http.SetCookie("myCookieName", "myCookieValue");
+##Http.SetHeader("accept", "text/html");
+##var resp2 = Http.Get("http://google.com");
+##Console.WriteLine("Response Status: {0}", resp2.Status);
+```
