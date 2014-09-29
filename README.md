@@ -6,7 +6,7 @@ Framework for running web test scripts for smoke testing websites or to generate
 Script Examples
 ===================
 
-Example script using the DSL to do a get request to google.com and display the status code to the console
+Example script using the DSL to do a get request to google.com and display the status code to the console. This example also show how to set a cookie and a http header value.
 
 ```
 http.set_cookie "myCookieName" "myCookieValue"
