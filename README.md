@@ -6,7 +6,7 @@ Framework for running web test scripts for smoke testing websites or to generate
 Script Examples
 ===================
 
-Example script using the DSL to do a get request to google.com and display the status code to the console
+Example script using the DSL to do a get request to google.com and display the status code to the console. This example also writes a cookie and header value to the request. #wl is a shortcut for console.write_line (or Console.WriteLine in C#)
 
 ```
 http.set_cookie "myCookieName" "myCookieValue"
@@ -24,7 +24,7 @@ var resp = Http.Get("http://google.com");
 Console.WriteLine("Response Status: {0}", resp2.Status);
 ```
 
-Mixing the DSL and C# in the same script
+Mixing the DSL and C# in the same script--beginning a line with ## tells the parser you are writing pure C# for that line
 
 ```
 http.set_cookie "myCookieName" "myCookieValue"
