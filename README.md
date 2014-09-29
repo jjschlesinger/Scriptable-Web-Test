@@ -18,10 +18,11 @@ var resp = http.get "http://google.com"
 Same as above example but using C#
 
 ```
-Http.SetCookie("myCookieName", "myCookieValue");
-Http.SetHeader("accept", "text/html");
-var resp = Http.Get("http://google.com");
-Console.WriteLine("Response Status: {0}", resp2.Status);
+var http = Http.Create();
+http.SetCookie("myCookieName", "myCookieValue");
+http.SetHeader("accept", "text/html");
+var resp = http.Get("http://google.com");
+Console.WriteLine("Response Status: {0}", resp.Status);
 ```
 
 Mixing the DSL and C# in the same script--beginning a line with ## tells the parser you are writing pure C# for that line
