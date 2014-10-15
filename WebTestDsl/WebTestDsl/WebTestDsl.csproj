@@ -82,14 +82,18 @@
   <ItemGroup>
     <Compile Include="Scripting\DSLParser.cs" />
     <Compile Include="Scripting\ScriptCsHost.cs" />
-    <Compile Include="Facade\Http.cs" />
-    <Compile Include="Facade\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebTestScriptRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HttpFacade\HttpFacade.csproj">
+      <Project>{fdfc2fd9-f178-4297-82ed-9ed9639394bf}</Project>
+      <Name>HttpFacade</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

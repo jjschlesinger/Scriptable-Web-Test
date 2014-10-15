@@ -2,11 +2,11 @@
 using System.IO;
 using Common.Logging;
 using Common.Logging.Simple;
+using HttpFacade;
 using ScriptCs;
 using ScriptCs.Contracts;
 using ScriptCs.Engine.Roslyn;
 using ScriptCs.Hosting;
-using WebTestDsl.Facade;
 using LogLevel = ScriptCs.Contracts.LogLevel;
 
 namespace WebTestDsl.Scripting

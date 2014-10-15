@@ -1,6 +1,6 @@
 ﻿using System;
+using HttpFacade;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WebTestDsl.Facade;
 
 namespace WebTestDsl.Tests
 {

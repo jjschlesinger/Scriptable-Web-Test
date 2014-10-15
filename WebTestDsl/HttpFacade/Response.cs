@@ -1,4 +1,4 @@
-﻿namespace WebTestDsl.Facade
+﻿namespace HttpFacade
 {
     public class Response
     {

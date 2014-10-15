@@ -55,6 +55,10 @@
     <Compile Include="DSLParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HttpFacade\HttpFacade.csproj">
+      <Project>{fdfc2fd9-f178-4297-82ed-9ed9639394bf}</Project>
+      <Name>HttpFacade</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebTestDsl\WebTestDsl.csproj">
       <Project>{9ed2a1bf-6924-4801-95e8-56687c1a3b8d}</Project>
       <Name>WebTestDsl</Name>
